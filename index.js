@@ -3,8 +3,8 @@ const app = express();
 const PORT = 3000;
 
 // Importing new routers from posts folder
-const charsRouter = require('./routes/charRoute');
-const skillsRouter = require('./routes/skillRoute');
+const charsRouter = require('./routes/charRoute.js');
+const skillsRouter = require('./routes/skillRoute.js');
 
 ///////////////////////////////////////////////////////////////////////
 /** Middlewares */
@@ -15,13 +15,11 @@ const skillsRouter = require('./routes/skillRoute');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: true }));
 
-
-
 ///////////////////////////////////////////////////////////////////////
 /** API Routes */
 
 // Char Route
-app.use("/api/users", charsRouter);
+app.use("/api/chars", charsRouter);
 // Skills Route
 app.use("/api/skills", skillsRouter);
 
@@ -42,4 +40,8 @@ app.use((req, res) => {
     res.json({
         error: 'Resource Not Found',
     });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port: ${PORT}`);
 });

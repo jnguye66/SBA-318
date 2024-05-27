@@ -36,7 +36,7 @@ const skills = [
         }
     },
     {
-        id: 1,
+        id: 2,
         userId: 2,
         basic: {
             name: 'Frigid Cold Arrow',
@@ -69,7 +69,7 @@ const skills = [
         }
     },
     {
-        id: 1,
+        id: 3,
         userId: 3,
         basic: {
             name: 'Cloudlancer Art: North Wind',
@@ -102,7 +102,7 @@ const skills = [
         }
     },
     {
-        id: 1,
+        id: 4,
         userId: 4,
         basic: {
             name: 'Sawblade Tuning',
@@ -135,7 +135,7 @@ const skills = [
         }
     },
     {
-        id: 1,
+        id: 5,
         userId: 5,
         basic: {
             name: 'Gravity Suppression',
@@ -169,4 +169,4 @@ const skills = [
     }
 ]
 
-module.express = skills;
+module.exports = skills;
