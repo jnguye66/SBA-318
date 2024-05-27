@@ -1,0 +1,23 @@
+html * {
+    font-family: sans-serif;
+    color: peachpuff;
+}
+
+body {
+    background-color: #12121d;
+    text-align: center;
+}
+
+#new-char {
+    background-color: #30304e;
+    width: 300px;
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#char-sub {
+    background: #4e4e74;
+}
