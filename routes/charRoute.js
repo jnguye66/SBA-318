@@ -38,6 +38,17 @@ router.get('/:id/skills', (req, res, next) => {
     }
 })
 
+// Creating a GET route that gets an individual character's
+// eidolons using a route parameters for said character
+router.get('/:id/eidolons', (req, res, next) => {
+    const char = chars.find((u) => u.id == req.params.id);
+    if (char) {
+        res.redirect(`../../eidolons/${char.id}`);
+    } else {
+        next();
+    }
+})
+
 //Creating a User (POST)
 router.post('/', (req, res) => {
     // Within the POST request route, we create a new
