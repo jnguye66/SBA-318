@@ -143,3 +143,5 @@ const eidolons = [
         }
     },
 ]
+
+module.exports = eidolons;

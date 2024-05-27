@@ -5,6 +5,7 @@ const PORT = 3000;
 // Importing new routers from posts folder
 const charsRouter = require('./routes/charRoute.js');
 const skillsRouter = require('./routes/skillRoute.js');
+const eidsRouter = require('./routes/eidolonRoute.js');
 
 ///////////////////////////////////////////////////////////////////////
 /** Middlewares */
@@ -22,6 +23,8 @@ app.use(express.json({ extended: true }));
 app.use("/api/chars", charsRouter);
 // Skills Route
 app.use("/api/skills", skillsRouter);
+// Eidolons Route
+app.use("/api/eidolons", eidsRouter);
 
 ///////////////////////////////////////////////////////////////////////
 /** Base URL */
