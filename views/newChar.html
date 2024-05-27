@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create A New User</title>
+    <title>Create A New Character</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/newChar.css">
 </head>
 
 <body>
-    <h1>Create A New User</h1>
-    <form action="/api/users?api-key=perscholas" method="POST">
+    <h1>Create A New Character</h1>
+    <form action="/api/chars" id="new-char" method="POST">
         <label for="name">
             Name: <input type="text" id="name" name="name" />
         </label>

@@ -68,12 +68,12 @@ router.post('/', (req, res) => {
             email: req.body.email,
         };
 
-        chars.push(user);
+        chars.push(char);
         res.json(chars[chars.length - 1]);
     } else res.json({ error: 'Insufficient Data' });
 });
 
-router.patch('/:id', (req, res) => {
+router.patch('/:id', (req, res, next) => {
     // Within the PATCH request route, we allow the client
     // to make changes to an existing user in the database.
     const char = chars.find((u, i) => {
@@ -90,7 +90,7 @@ router.patch('/:id', (req, res) => {
     else next();
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', (req, res, next) => {
     // The DELETE request route simply removes a resource.
     const char = chars.find((u, i) => {
         if (u.id == req.params.id) {
