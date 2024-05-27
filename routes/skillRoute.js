@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 
-//Importing the data from characters.js
+// Importing the data from characters.js
 const skills = require('../data/skills.js');
 
 /**
@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
     // user with the data given by the client.
     // We should also do some more robust validation here,
     // but this is just an example for now.
-    if (req.body.userId && req.body.title && req.body.content) {
+    if (req.body.userId && req.body.basic && req.body.skill && req.body.ultimate && req.body.passive) {
         const skill = {
             id: skills[skills.length - 1].id + 1,
             userId: req.body.userId,
